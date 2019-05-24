@@ -1,0 +1,90 @@
+{
+	"name": "formate",
+	"displayName": "formate: CSS/LESS/SCSS formatter",
+	"publisher": "MikeBovenlander",
+	"author": {
+		"name": "Mike Bovenlander"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mblander/formate"
+	},
+	"bugs": {
+		"url": "https://github.com/mblander/formate/issues"
+	},
+	"homepage": "https://github.com/mblander/formate",
+	"icon": "images/formateicon.PNG",
+	"galleryBanner": {
+		"color": "#333",
+		"theme": "dark"
+	},
+	"description": "Formate is an CSS/LESS/SCSS format extension to format properties and align property values to improve readability.",
+	"version": "1.1.1",
+	"engines": {
+		"vscode": "^1.32.0"
+	},
+	"categories": [
+		"Formatters"
+	],
+	"keywords": [
+		"formate",
+		"css",
+		"sass",
+		"scss",
+		"less",
+		"formatter",
+		"format",
+		"beautify",
+		"beautifier",
+		"code-quality"
+	],
+	"activationEvents": [
+		"onCommand:extension.formate",
+		"onLanguage:css",
+		"onLanguage:less",
+		"onLanguage:scss",
+		"onLanguage:sass"
+	],
+	"main": "./out/extension",
+	"contributes": {
+		"type": "object",
+		"title": "formate configuration",
+		"properties": {
+			"formate.enable": {
+				"scope": "resource",
+				"type": "boolean",
+				"default": true,
+				"description": "Controls whether formate is enabled or not."
+			},
+			"formate.verticalAlignProperties": {
+				"scope": "resource",
+				"type": "boolean",
+				"default": false,
+				"description": "Vertical align properties on colon per selector."
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "npm run compile && node ./node_modules/vscode/bin/test"
+	},
+	"dependencies": {
+		"@types/js-beautify": "^1.8.0",
+		"js-beautify": "1.10.0"
+	},
+	"devDependencies": {
+		"typescript": "^3.4.5",
+		"vscode": "^1.1.33",
+		"tslint": "^5.16.0",
+		"@types/node": "^12.0.0",
+		"@types/mocha": "^5.2.6"
+	},
+	"__metadata": {
+		"id": "9f5a82a8-eb54-420f-9fb8-171c5405ec8a",
+		"publisherId": "4bc01e11-67d4-4c24-b3b7-85bf46f59565",
+		"publisherDisplayName": "MikeBovenlander"
+	}
+}

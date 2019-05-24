@@ -1,0 +1,14 @@
+{
+    "workbench.editor.showTabs": false,
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 16,
+    "editor.lineHeight": 30,
+    "files.associations": {"*.html.eex": "html"},
+    "emmet.includeLanguages": {
+        "HTML (Eex)": "html"
+    },
+    "[sass]": {
+        "editor.defaultFormatter": "MikeBovenlander.formate"
+    }
+}
